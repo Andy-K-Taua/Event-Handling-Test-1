@@ -1,4 +1,5 @@
 // Wait for DOM to be ready
+
 document.addEventListener('DOMContentLoaded', () => {
     const cubeOne = document.getElementById('cubeOne');
     const cubeTwo = document.getElementById('cubeTwo');
