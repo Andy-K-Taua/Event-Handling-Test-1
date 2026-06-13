@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="main.js"></script>
+    <title>Event Handling Test</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="mainScreen">
-        <div id="cubeOne"></div>
-        <div id="cubeTwo"></div>
-    </div>
+    <main id="mainScreen">
+        <div id="cubeOne" class="cube">Blue</div>
+        <div id="cubeTwo" class="cube">Red</div>
+    </main>
+    
     <div id="controlPad">
-        <div id="leftButton" onclick="myFunction()"></div>
-        <div id="rightButton" onclick="myFunctionTwo()"></div>
+        <button id="leftButton" class="control-btn" aria-label="Set cube two to red"></button>
+        <button id="rightButton" class="control-btn" aria-label="Set cube one to blue"></button>
     </div>
+
+    <script src="main.js" defer></script>
 </body>
 </html>

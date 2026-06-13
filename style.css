@@ -1,45 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    padding: 20px;
+}
+
 #mainScreen {
-    border: solid 5px;
+    border: 5px solid #333;
     height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.cube {
+    border: 5px solid #000;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.cube.active {
+    transform: scale(1.1);
 }
 
 #cubeOne {
-    border: solid 5px;
     background-color: blue;
-    position: relative;
-    left: 0px;
 }
 
 #cubeTwo {
-    border: solid 5px;
     background-color: red;
-    position: relative;
-    right: 0px;
 }
 
 #controlPad {
-    border: solid 5px;
+    border: 5px solid #333;
     height: 200px;
     margin-top: 50px;
     position: relative;
 }
 
-#leftButton {
-    background-color: red;
-    border-radius: 50px;
+.control-btn {
+    border: 3px solid #000;
+    border-radius: 50%;
     height: 60px;
     width: 60px;
     position: absolute;
-    left: 90px;
     top: 70px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+#leftButton {
+    background-color: red;
+    left: 90px;
 }
 
 #rightButton {
     background-color: blue;
-    border-radius: 50px;
-    height: 60px;
-    width: 60px;
-    position: absolute;
     right: 90px;
-    top: 70px;
 }
